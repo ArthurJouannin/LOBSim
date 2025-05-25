@@ -125,7 +125,7 @@ class LOBSim:
             history[i] = [t for t in history[i] if t > cutoff_time]
             history[i] = deque(history[i], maxlen=500)  
     
-    def compute_intensity_optimized(self, event_idx, t, history, lob):
+    def compute_intensity(self, event_idx, t, history, lob):
         mu = self.calibrated['mu'][event_idx]
         time_factor = self.calibrated['time_factor'](t)
         
@@ -276,7 +276,7 @@ class LOBSim:
                 rate_check = t
             
             intensities = np.array([
-                self.compute_intensity_optimized(i, t, history, lob) 
+                self.compute_intensity(i, t, history, lob) 
                 for i in range(12)
             ])
             
