@@ -41,4 +41,4 @@ Pour plus de détails, voir l’article : [arXiv:2312.08927v5](https://arxiv.or
 
 ## Résultats
 
-<img width="949" alt="Capture d'écran 2025-05-24 221720" src="https://github.com/user-attachments/assets/2c6b91ee-ff55-4539-80b6-b8b3fa36bd85" />
+![Result1](https://github.com/user-attachments/assets/f5926498-0689-4974-8600-f1786e226e3d)
