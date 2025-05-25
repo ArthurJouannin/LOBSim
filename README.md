@@ -1,7 +1,5 @@
 # LOBSim: Simulateur de Carnet d'Ordres Haute Fréquence
 
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE) [![Python](https://img.shields.io/badge/python-3.7%2B-blue)](https://www.python.org/) [![ArXiv](https://img.shields.io/badge/arXiv-2312.08927v5-red)](https://arxiv.org/abs/2312.08927)
-
 ## Description
 
 LOBSim est un simulateur de carnet d'ordres (Limit Order Book) basé sur un Processus de Hawkes Composé. Il modélise la dynamique des marchés financiers haute fréquence en simulant 12 types d'événements de trading, calibrés avec une méthode inspirée de Kirchner (2017) et Bacry et al. (2016). 
