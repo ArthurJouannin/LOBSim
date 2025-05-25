@@ -21,7 +21,7 @@ Ce projet s'appuie sur l'article académique « Limit Order Book Dynamics and O
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/votre-utilisateur/LOBSim.git
+git clone https://github.com/Tuturj/LOBSim.git
 cd LOBSim
 
 # Créer un environnement virtuel
