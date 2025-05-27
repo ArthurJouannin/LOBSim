@@ -21,7 +21,7 @@ Ce projet s'appuie sur l'article académique « Limit Order Book Dynamics and O
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/Tuturj/LOBSim.git
+git clone https://github.com/ArthurJouannin/LOBSim.git
 
 # Créer un environnement virtuel
 python -m venv venv
@@ -58,7 +58,7 @@ LOBSim_MI.py :
 
 1. Cloner le dépôt :
     ```bash
-    git clone https://github.com/Tuturj/LOBSim.git
+    git clone https://github.com/ArthurJouannin/LOBSim.git
     ```
 2. Créer et activer un environnement virtuel (optionnel mais recommandé) :
     ```bash
@@ -73,4 +73,5 @@ LOBSim_MI.py :
     
 ## Résultats
 
+![Result2](https://github.com/user-attachments/assets/5e149d24-3e66-4528-8c59-7cbf3655156c)
 
