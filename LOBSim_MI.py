@@ -450,13 +450,13 @@ class LOBSim:
             if result['MO_time'] and result['MO_results']:
                 start = result['MO_results']['start_time']
                 end = result['MO_results']['end_time']
-                axes[1].axvline(start, linestyle='--', alpha=0.5, color=f'C{i}', label=f'Début MO {i+1}')
-                axes[1].axvline(end, linestyle=':', alpha=0.5, color=f'C{i}', label=f'Fin MO {i+1}')
-            axes[1].plot(times, prices, alpha=0.8, linewidth=1)
+                axes[0].axvline(start, linestyle='--', alpha=0.5, color=f'C{i}', label=f'Début MO {i+1}')
+                axes[0].axvline(end, linestyle=':', alpha=0.5, color=f'C{i}', label=f'Fin MO {i+1}')
+            axes[0].plot(times, prices, alpha=0.8, linewidth=1)
 
-        axes[1].set_title('Évolution du Prix Mid avec Meta-Orders Linéaires')
-        axes[1].set_xlabel('Temps (s)')
-        axes[1].set_ylabel('Prix')
+        axes[0].set_title('Évolution du Prix Mid avec Meta-Orders Linéaires')
+        axes[0].set_xlabel('Temps (s)')
+        axes[0].set_ylabel('Prix')
 
         impacts = {'immediate': [], 'permanent': [], 'temporary': []}
         order_sizes = []
@@ -474,29 +474,28 @@ class LOBSim:
         if order_sizes:
             x_pos = np.arange(len(order_sizes))
             width = 0.25
-            axes[2].bar(x_pos - width, impacts['immediate'], width, label='Impact Immédiat', alpha=0.8)
-            axes[2].bar(x_pos, impacts['permanent'], width, label='Impact Permanent', alpha=0.8)
-            axes[2].bar(x_pos + width, impacts['temporary'], width, label='Impact Temporaire', alpha=0.8)
-            axes[2].set_xtick_params(x_pos)
-            axes[2].set_xticklabels([f'{int(size)}' for size in order_sizes])
+            axes[1].bar(x_pos - width, impacts['immediate'], width, label='Impact Immédiat', alpha=0.8)
+            axes[1].bar(x_pos, impacts['permanent'], width, label='Impact Permanent', alpha=0.8)
+            axes[1].bar(x_pos + width, impacts['temporary'], width, label='Impact Temporaire', alpha=0.8)
+            axes[1].set_xticklabels([f'{int(size)}' for size in order_sizes])
 
-        axes[2].set_title('Décomposition de l\'Impact de Marché')
-        axes[2].set_xlabel('Taille du Meta-Order')
+        axes[1].set_title('Décomposition de l\'Impact de Marché')
+        axes[1].set_xlabel('Taille du Meta-Order')
 
         plt.tight_layout()
         plt.show()
 
 if __name__ == "__main__":
-    sizes = [0, 1000]
-    durations = [100, 100] 
+    sizes = [0, 500, 1000, 2000]
+    durations = [100, 100, 100, 100] 
     results = []
 
     for i, (size, duration) in enumerate(zip(sizes, durations)):
         sim = LOBSim(iprice=100.0, tick_size=0.01, seed=834)
         result = sim.simulate_with_meta_order(
             T=3600, 
-            max_events=25000, 
-            MO_time=1700, 
+            max_events=10000, 
+            MO_time=500, 
             MO_size=size, 
             MO_side='buy', 
             MO_duration=duration,
