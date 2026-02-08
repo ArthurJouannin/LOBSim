@@ -9,7 +9,7 @@ Ce projet s'appuie sur l'article académique « Limit Order Book Dynamics and O
 ## Fonctionnalités principales
 
 * **12 types d'événements** : Limit Orders (LO), Market Orders (MO), Cancel Orders (CO) sur trois niveaux de prix (ask\_p1, ask0, ask\_m1, bid\_p1, bid0, bid\_m1).
-* **Calibration automatique** : paramètres μ, noyaux power-law, facteur temporel intra-journalier.
+* **Calibration automatique**
 * **Visualisations intégrées** :
   
   * Évolution du mid-price
